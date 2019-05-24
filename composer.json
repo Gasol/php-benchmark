@@ -9,5 +9,10 @@
             "email": "gasol.wu@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "GasolWu\\Benchmark\\": "src"
+        }
+    },
     "require": {}
 }
