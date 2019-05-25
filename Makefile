@@ -9,4 +9,4 @@ test:
 bench:
 	$(PHPBENCH_CMD) run --report=default --revs 1000
 
-.PHONY: test
+.PHONY: all bench test
