@@ -9,6 +9,9 @@ class CamelCaseBench
         yield 'underscore' => ['under_score'];
         yield 'dash' => ['da-sh'];
         yield 'nodelimiter' => ['nodelimiter'];
+        yield '2-underscore' => ['two-underscore-sample'];
+        yield '3-underscore' => ['three-more-underscore-sample'];
+        yield 'very long dash' => ['very-long-dash-sample-foo-bar-baz-hello-world'];
     }
 
     /**
