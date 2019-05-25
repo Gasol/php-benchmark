@@ -22,4 +22,12 @@ class CamelCaseTest extends TestCase
     {
         $this->assertEquals($expected, CamelCase::laravelCamelCase($string));
     }
+
+    /**
+     * @dataProvider snakeCaseProvider
+     */
+    public function testCamelCase($string, $expected)
+    {
+        $this->assertEquals($expected, CamelCase::camelCase($string));
+    }
 }

@@ -11,12 +11,19 @@ class CamelCaseBench
         yield 'nodelimiter' => ['nodelimiter'];
     }
 
-
     /**
      * @ParamProviders({"provideStrings"})
      */
     public function benchLaravelCamelCase($string)
     {
         CamelCase::laravelCamelCase($string[0]);
+    }
+
+    /**
+     * @ParamProviders({"provideStrings"})
+     */
+    public function benchCamelCase($string)
+    {
+        CamelCase::camelCase($string[0]);
     }
 }
