@@ -1,12 +1,16 @@
+COMPOSER_CMD := composer
 PHPUNIT_CMD := vendor/bin/phpunit
 PHPBENCH_CMD := phpbench.phar
 
 all: test
 
-test:
+test: vendor
 	$(PHPUNIT_CMD)
 
-bench:
+bench: vendor
 	$(PHPBENCH_CMD) run --report=default --revs 1000
 
-.PHONY: all bench test
+vendor:
+	$(COMPOSER_CMD) install
+
+.PHONY: all bench test vendor
