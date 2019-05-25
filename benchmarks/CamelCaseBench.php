@@ -37,4 +37,12 @@ class CamelCaseBench
     {
         CamelCase::explodeCamelCase($string[0]);
     }
+
+    /**
+     * @ParamProviders({"provideStrings"})
+     */
+    public function benchStrtokCamelCase($string)
+    {
+        CamelCase::strtokCamelCase($string[0]);
+    }
 }

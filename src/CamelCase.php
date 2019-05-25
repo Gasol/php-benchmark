@@ -57,4 +57,17 @@ class CamelCase
             str_replace(' ', '', $uc_string)
         );
     }
+
+    public static function strtokCamelCase($string)
+    {
+        $delimiter = '-_';
+        $string = strtolower($string);
+        $token = strtok($string, $delimiter);
+        $result = '';
+        while ($token !== false) {
+            $result .= ucfirst($token);
+            $token = strtok($delimiter);
+        }
+        return lcfirst($result);
+    }
 }
