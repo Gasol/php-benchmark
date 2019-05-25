@@ -30,4 +30,12 @@ class CamelCaseTest extends TestCase
     {
         $this->assertEquals($expected, CamelCase::camelCase($string));
     }
+
+    /**
+     * @dataProvider snakeCaseProvider
+     */
+    public function testExplodeCamelCase($string, $expected)
+    {
+        $this->assertEquals($expected, CamelCase::explodeCamelCase($string));
+    }
 }

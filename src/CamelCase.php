@@ -37,6 +37,17 @@ class CamelCase
         return $result;
     }
 
+    public static function explodeCamelCase($string)
+    {
+        $string = strtolower($string);
+        $string = str_replace('-', '_', $string);
+        $result = '';
+        foreach (explode('_', $string) as $i => $segment) {
+            $result .= ($i > 0) ? ucfirst($segment) : $segment;
+        }
+        return $result;
+    }
+
     public static function laravelCamelCase($string)
     {
         $lower_string = strtolower($string);
